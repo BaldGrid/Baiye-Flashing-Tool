@@ -1,53 +1,46 @@
 # 📱 BaiYe Flashing Tool
 
-[English](#english) | [简体中文](#简体中文)
+> ⚡ An Android flashing toolbox integrating Qualcomm EDL, MediaTek BROM, ADB and Fastboot
+---
+
+## 🎯 Features
+
+- ✅ **Qualcomm EDL Flashing** – Supports 9008 port deep-level flashing
+- 🚧 **MediaTek BROM Flashing** – Supports MTK devices (under development)
+- 🖥️ **ADB Command Line** – Full-featured Android Debug Bridge
+- 📲 **Fastboot Flashing** – Supports Bootloader mode flashing
+- 🎮 **One‑Click Operations** – Double‑click to run, no environment variables required
+- 📦 **Portable** – Green software, extract and use immediately
 
 ---
 
-## 简体中文
+## 🚀 Quick Start
 
-> ⚡ 一款集成高通EDL、联发科BROM、ADB和Fastboot的安卓刷机工具箱
+**1. Download the Tool**  
+Directly clone the repository via Git.
 
-![Platform](https://img.shields.io/badge/平台-Windows-blue)
-![Status](https://img.shields.io/badge/状态-活跃开发-green)
-![Version](https://img.shields.io/badge/版本-v1.0.0-orange)
+**2. Extract Files**  
+Unzip to any folder (avoid Chinese characters in path).
 
----
+**3. Run the Tool**  
+Double‑click `main.bat` to launch.
 
-### 🎯 功能特性
-
-- ✅ **高通EDL刷写** - 支持9008端口深度刷机
-- 🚧 **联发科BROM刷写** - 支持MTK机型（开发中）
-- 🖥️ **ADB命令行** - 安卓调试桥完整功能
-- 📲 **Fastboot刷写** - 支持Bootloader模式刷机
-- 🎮 **一键式操作** - 双击即用，无需配置环境变量
-- 📦 **免安装** - 绿色便携，解压即用
+**4. Select Function**  
+Follow the on‑screen menu.
 
 ---
 
-### 🚀 快速开始
+## 📋 Requirements
 
-**1. 下载工具**  
-从 Releases 下载最新版本压缩包
-
-**2. 解压文件**  
-解压到任意文件夹（建议路径不要包含中文）
-
-**3. 运行工具**  
-双击 `main.bat` 即可启动主程序
-
-**4. 选择功能**  
-根据菜单提示选择对应刷机模式
+| Item | Requirement |
+|------|-------------|
+| OS | Windows 7 / 8 / 10 / 11 |
+| Drivers | Qualcomm / MediaTek drivers installed |
+| USB Cable | Data‑transfer capable |
+| Permissions | Administrator rights (for some functions) |
 
 ---
 
-### 📋 使用要求
+## 🌐 Language
 
-| 项目 | 要求 |
-|------|------|
-| 操作系统 | Windows 7 / 8 / 10 / 11 |
-| 驱动 | 已安装对应手机驱动（高通/联发科） |
-| 数据线 | 支持数据传输的USB线 |
-| 权限 | 管理员权限（部分功能需要） |
-
----
+[📘 中文文档](README.zh-CN.md)
