@@ -2,21 +2,27 @@
 chcp 65001 >nul
 setlocal EnableDelayedExpansion
 
+::====================================
+::  白叶一键工具 - 公共变量
+::====================================
+
+:: 防止重复加载
 if defined COMMON_LOADED exit /b
 set COMMON_LOADED=1
 
 :: ======== 路径变量 ========
 set ROOT=%~dp0..
-set BIN=%ROOT%\bin
+set BIN=%ROOT%\tools
 set MODULE=%ROOT%\modules
 set FIRMWARE=%ROOT%\firmware
 set BACKUP=%ROOT%\backup
 set LOG=%ROOT%\logs
+set MTK=%ROOT%\mtk
 set CONFIG=%ROOT%\config.ini
 set TEMP=%ROOT%\temp
 
 :: 添加到PATH
-set PATH=%BIN%;%PATH%
+set PATH=%BIN%;%MTK%;%PATH%
 
 :: 创建目录
 if not exist "%BIN%" mkdir "%BIN%"
@@ -24,16 +30,18 @@ if not exist "%MODULE%" mkdir "%MODULE%"
 if not exist "%FIRMWARE%" mkdir "%FIRMWARE%"
 if not exist "%BACKUP%" mkdir "%BACKUP%"
 if not exist "%LOG%" mkdir "%LOG%"
+if not exist "%MTK%" mkdir "%MTK%"
 if not exist "%TEMP%" mkdir "%TEMP%"
 
 :: ======== 配置文件 ========
 if not exist "%CONFIG%" (
     (
     echo [PATH]
-    echo BIN=%ROOT%\bin
+    echo BIN=%ROOT%\tools
     echo FIRMWARE=%ROOT%\firmware
     echo BACKUP=%ROOT%\backup
     echo LOG=%ROOT%\logs
+    echo MTK=%ROOT%\mtk
     echo MODE=auto
     echo THEME=0A
     echo DEBUG=false
@@ -50,9 +58,10 @@ if defined CFG_BIN set BIN=%CFG_BIN%
 if defined CFG_FIRMWARE set FIRMWARE=%CFG_FIRMWARE%
 if defined CFG_BACKUP set BACKUP=%CFG_BACKUP%
 if defined CFG_LOG set LOG=%CFG_LOG%
+if defined CFG_MTK set MTK=%CFG_MTK%
 
 :: 重置PATH
-set PATH=%BIN%;%PATH%
+set PATH=%BIN%;%MTK%;%PATH%
 
 :: ======== 设备变量 ========
 set DEVICE_ADB=false
